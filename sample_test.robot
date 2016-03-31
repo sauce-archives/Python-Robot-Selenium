@@ -9,12 +9,12 @@ Test Teardown  Close test browser
 *** Variables ***
 
 @{_tmp} 
-	...  name: Sample Robot Framework Test on Sauce,
 	...  browserName: %{browserName},
 	...  platform: %{platform},
-	...  version: %{version}
+	...  version: %{version},
+	...  name: Robot %{TEST_NAME}
 
-${BROWSER}      	%{browserName}
+${BROWSER}      	%{ROBOT_BROWSER}
 ${CAPABILITIES}     ${EMPTY.join(${_tmp})} 
 ${KEY}              %{SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}
 ${REMOTE_URL}       http://${KEY}@ondemand.saucelabs.com:80/wd/hub
@@ -23,8 +23,6 @@ ${PAGE_TITLE}       Sauce Labs: Login
 *** Test Cases ***
 
 Example of connecting to Sauce via Robot Framework
-
-	Go to  https://saucelabs.com/login
 
 	Page should contain element  name=username
 	Page should contain element  name=password
@@ -36,7 +34,7 @@ Example of connecting to Sauce via Robot Framework
 *** Keywords ***
 
 Open test browser
-    Open browser  about:  ${BROWSER}
+    Open browser  https://saucelabs.com/login/  browser=${BROWSER}
     ...  remote_url=${REMOTE_URL}
     ...  desired_capabilities=${CAPABILITIES}
 
