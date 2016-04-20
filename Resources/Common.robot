@@ -1,5 +1,4 @@
 *** Settings ***
-Library  pabot.PabotLib
 Library  Selenium2Library
 Library  SauceLabs.py
 
