@@ -11,6 +11,6 @@ def report_sauce_status(name, status):
     selenium = BuiltIn().get_library_instance('Selenium2Library')
     job_id = selenium._current_browser().session_id
     passed = status == 'PASS'
-    sauce_client.jobs.update_job(job_id, passed = passed)
+    sauce_client.jobs.update_job(job_id, passed = passed, name = name)
     print "SauceOnDemandSessionID=%s job-name=%s" % (job_id, name)
 
