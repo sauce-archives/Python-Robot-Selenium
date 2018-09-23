@@ -24,8 +24,8 @@ Open test browser
     ...  desired_capabilities=${CAPABILITIES}
 
 Close test browser
-    Run keyword if  '${REMOTE_URL}' != ''
-    ...  Report Sauce status
-    ...  ${TEST_NAME} 
-    ...  ${TEST_STATUS} 
+#    Run keyword if  '${REMOTE_URL}' != ''
+#    ...  Report Sauce status
+#    ...  ${TEST_NAME}
+#    ...  ${TEST_STATUS}
     Close all browsers
