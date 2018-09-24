@@ -1,6 +1,9 @@
 run_all_in_parallel:
 	make -j \
 	test_Windows_10_chrome_69 \
+	test_Windows_8_chrome_69 \
+	test_Windows_7_chrome_69 \
+	test_Windows_10_firefox_62 \
 	test_OX_X_10_13_firefox_61 \
 	test_OS_X_10_13_chrome_61
 
@@ -13,6 +16,39 @@ test_Windows_10_chrome_69:
 	-o test_Windows_10_chrome_69.xml \
 	-l test_Windows_10_chrome_69_log.html \
 	-r test_Windows_10_chrome_69_report.html \
+	Tests/sample_test.robot
+
+test_Windows_8_chrome_69:
+	platform="Windows 8" \
+	browserName=chrome \
+	version=69 \
+	ROBOT_BROWSER=chrome \
+	pybot -T -d test_Windows_8_chrome_69 \
+	-o test_Windows_8_chrome_69.xml \
+	-l test_Windows_8_chrome_69_log.html \
+	-r test_Windows_8_chrome_69_report.html \
+	Tests/sample_test.robot
+
+test_Windows_7_chrome_69:
+	platform="Windows 7" \
+	browserName=chrome \
+	version=69 \
+	ROBOT_BROWSER=chrome \
+	pybot -T -d test_Windows_7_chrome_69 \
+	-o test_Windows_7_chrome_69.xml \
+	-l test_Windows_7_chrome_69_log.html \
+	-r test_Windows_7_chrome_69_report.html \
+	Tests/sample_test.robot
+
+test_Windows_10_firefox_62:
+	platform="Windows 10" \
+	browserName=firefox \
+	version=62 \
+	ROBOT_BROWSER=firefox \
+	pybot -T -d test_Windows_10_firefox_62 \
+	-o test_Windows_10_firefox_62.xml \
+	-l test_Windows_10_firefox_62_log.html \
+	-r test_Windows_10_firefox_62_report.html \
 	Tests/sample_test.robot
 
 test_OX_X_10_13_firefox_61:
