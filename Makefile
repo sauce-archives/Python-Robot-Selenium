@@ -1,5 +1,6 @@
 run_all_in_parallel:
-	make -j test_Windows_10_chrome_69 \
+	make -j \
+	test_Windows_10_chrome_69 \
 	test_OX_X_10_13_firefox_61 \
 	test_OS_X_10_13_chrome_61
 
