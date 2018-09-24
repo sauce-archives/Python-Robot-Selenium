@@ -29,7 +29,7 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 
 Tests in Parallel:
 	```
-	$ make run_all_in_parallel
+	$ make -B run_all_in_parallel
 	```
 
 [Sauce Labs Dashboard](https://saucelabs.com/beta/dashboard/builds)
