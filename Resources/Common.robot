@@ -1,5 +1,5 @@
 *** Settings ***
-Library  Selenium2Library
+Library  SeleniumLibrary
 Library  SauceLabs.py
 
 *** Variables ***
@@ -19,13 +19,13 @@ ${PAGE_TITLE}       Sauce Labs: Login
 *** Keywords ***
 
 Open test browser
-    Open browser  https://saucelabs.com/login/  browser=${BROWSER}
+    Open browser  https://saucelabs.com/beta/login  browser=${BROWSER}
     ...  remote_url=${REMOTE_URL}
     ...  desired_capabilities=${CAPABILITIES}
 
 Close test browser
-    Run keyword if  '${REMOTE_URL}' != ''
-    ...  Report Sauce status
-    ...  ${TEST_NAME} 
-    ...  ${TEST_STATUS} 
+#    Run keyword if  '${REMOTE_URL}' != ''
+#    ...  Report Sauce status
+#    ...  ${TEST_NAME}
+#    ...  ${TEST_STATUS}
     Close all browsers

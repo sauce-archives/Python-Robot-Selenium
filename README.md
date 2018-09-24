@@ -23,16 +23,16 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 3. Project Dependencies
 	* Install packages (Use sudo if necessary)
 	```
-	$ pip install sauceclient robotframework robotframework-selenium2library
+	$ pip install sauceclient robotframework robotframework-seleniumlibrary
 	```
 ### Running Tests
 
 Tests in Parallel:
 	```
-	$ make run_all_in_parallel
+	$ make -B run_all_in_parallel
 	```
 
-[Sauce Labs Dashboard](https://saucelabs.com/beta/dashboard/)
+[Sauce Labs Dashboard](https://saucelabs.com/beta/dashboard/builds)
 
 ### Advice/Troubleshooting
 
