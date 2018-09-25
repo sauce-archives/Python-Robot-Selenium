@@ -32,7 +32,7 @@ Tests in Parallel:
 	$ make run_all_in_parallel
 	```
 
-[Sauce Labs Dashboard](https://saucelabs.com/beta/dashboard/)
+[Sauce Labs Dashboard](https://saucelabs.com/beta/dashboard/builds)
 
 ### Advice/Troubleshooting
 
