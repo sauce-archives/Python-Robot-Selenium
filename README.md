@@ -23,7 +23,7 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 3. Project Dependencies
 	* Install packages (Use sudo if necessary)
 	```
-	$ pip install sauceclient robotframework robotframework-selenium2library
+	$ pip install -r requirements.txt
 	```
 ### Running Tests
 
