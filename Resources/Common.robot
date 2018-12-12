@@ -19,7 +19,7 @@ ${PAGE_TITLE}       Sauce Labs: Login
 *** Keywords ***
 
 Open test browser
-    Open browser  https://saucelabs.com/login/  browser=${BROWSER}
+    Open browser  http://www.saucedemo.com  browser=${BROWSER}
     ...  remote_url=${REMOTE_URL}
     ...  desired_capabilities=${CAPABILITIES}
 
