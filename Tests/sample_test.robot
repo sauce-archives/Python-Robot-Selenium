@@ -9,11 +9,21 @@ Test Teardown  Common.Close test browser
 
 *** Test Cases ***
 
-Example of connecting to Sauce via Robot Framework 
+Valid Login with Standard User
 
-	Page should contain element  css:[data-test=username]
-	Page should contain element  css:[data-test=password]
+	Page should contain element  id:user-name
+	Page should contain element  id:password
 
-	Input text  css:[data-test=username]  anonymous
-	Input text  css:[data-test=password]  secret
-	Click button  class:login-button
+	Input text  id:user-name  standard_user
+	Input text  id:password  secret_sauce
+	Click button  class:btn_action
+
+	Page should contain element  id:shopping_cart_container
+
+Invalid Login with Invalid User
+
+	Input text  id:user-name  locked_out_user
+	Input text  id:password  secret_sauce
+	Click button  class:btn_action
+
+	Page should contain element  class:error-button
