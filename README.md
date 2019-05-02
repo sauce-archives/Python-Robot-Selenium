@@ -29,10 +29,16 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 	```
 ### Running Tests
 
-Tests in Parallel:
-	```
-	$ make run_all_in_parallel
-	```
+Tests in Parallel: To run tests in parallel against a single browser, run one of
+```
+  make chrome_case
+  make ie_case
+  make firefox_case
+```
+and to run all tests in parallel across all browsers, run
+```
+  make run_all_in_parallel
+```
 
 [Sauce Labs Dashboard](https://app.saucelabs.com/dashboard)
 
