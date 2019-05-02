@@ -1,3 +1,4 @@
 sauceclient
 robotframework
+robotframework-pabot
 robotframework-selenium2library

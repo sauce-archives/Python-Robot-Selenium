@@ -1,0 +1,6 @@
+.pabotsuitenames
+.vscode/
+*xml
+*html
+*pyc
+pabot_results/*
