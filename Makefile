@@ -9,3 +9,6 @@ firefox_case:
 
 chrome_case:
 	platform="OS X 10.13" browserName=chrome version=latest ROBOT_BROWSER=chrome pabot --output=results_chrome Tests/
+
+safari_case:
+	platform="OS X 10.13" browserName=safari version=12 ROBOT_BROWSER=chrome pabot --output=results_safari Tests/
