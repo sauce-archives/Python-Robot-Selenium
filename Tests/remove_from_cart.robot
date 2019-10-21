@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource  ../Resources/Common.robot
+Resource  ../Resources/Inventory.robot
 
 Test Setup  Common.Open inventory page
 Test Teardown  Common.Close test browser
@@ -14,10 +15,10 @@ ${TWO}  2
 
 Remove One Item From Cart
 
-	Click button  class:btn_primary
-        Click button  class:btn_primary
+	Inventory.Add Item To Cart
+	Inventory.Add Item To Cart
 
-	Click button  class:btn_secondary
+	Inventory.Remove Item From Cart
 
-	Page should contain element  class:shopping_cart_badge
+	Inventory.Has Items In Cart
 	${ONE}  Get text  class:shopping_cart_badge
