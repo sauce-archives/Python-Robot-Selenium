@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource  ../Resources/Common.robot
+Resource  ../Resources/inventory.robot
 
 Test Setup  Common.Open inventory page
 Test Teardown  Common.Close test browser
@@ -14,14 +15,14 @@ ${TWO}  2
 
 Add One Item to Cart
 
-	Click button  class:btn_primary
+	Inventory.Add Item To Cart
 
-	Page should contain element  class:shopping_cart_badge
+	Inventory.Has Items In Cart
 	${ONE}  Get text  class:shopping_cart_badge
 
 Add Two Items to Cart
 
-	Click button  class:btn_primary
-	Click button  class:btn_primary
+	Inventory.Add Item To Cart
+	Inventory.Add Item To Cart
 
 	${TWO}  Get text  class:shopping_cart_badge
