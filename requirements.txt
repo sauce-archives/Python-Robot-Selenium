@@ -1,4 +1,4 @@
-sauceclient
+-e git+https://github.com/cgoldberg/sauceclient.git#egg=sauceclient
 robotframework
 robotframework-pabot
 robotframework-selenium2library

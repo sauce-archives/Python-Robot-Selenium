@@ -14,7 +14,7 @@ Library  SauceLabs.py
 
 ${BROWSER}          %{ROBOT_BROWSER}
 ${CAPABILITIES}     ${EMPTY.join(${_tmp})} 
-${REMOTE_URL}       http://ondemand.saucelabs.com/wd/hub
+${REMOTE_URL}       http://ondemand.eu-central-1.saucelabs.com/wd/hub
 ${PAGE_TITLE}       Sauce Labs: Login
 
 *** Keywords ***
