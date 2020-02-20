@@ -29,15 +29,21 @@ This code is provided on an "AS-IS” basis without warranty of any kind, either
 	```
 ### Running Tests
 
-Tests in Parallel: To run tests in parallel against a single browser, run one of
+Tests in Series: To run tests in parallel, use the `robot` executor and a browser config file like this:
+
 ```
-  make chrome_case
-  make ie_case
-  make firefox_case
+robot -A chrome_config.txt Tests/
+```
+
+Tests in Parallel: To run tests in parallel against a single browser, use the `pabot` executor and run one of
+```
+pabot -A chrome_config.txt Tests/
+pabot -A firefox_config.txt Tests/
+pabot -A ie_config.txt Tests/
 ```
 and to run all tests in parallel across all browsers, run
 ```
-  make run_all_in_parallel
+pabot --argumentfile1 chrome_config.txt --argumentfile2 firefox_config.txt --argumentfile3 ie_config.txt Tests/
 ```
 
 [Sauce Labs Dashboard](https://app.saucelabs.com/dashboard)
